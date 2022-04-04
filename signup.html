@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courbe - Sign up</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/signup.css">
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <nav>
+        <a style="text-decoration: none;
+    color: whitesmoke;" href="/">
+            <h1 id="title">Courbe</h1>
+        </a>
+        <div class="nav__list">
+            <a href="login.html" id="login">Iniciar sesion</a>
+        </div>
+
+    </nav>
+    <!-- Login -->
+
+    <div class="login">
+        <h2 id="titleLogin">Registrarse</h2>
+        <sub id="error"></sub>
+        <form>
+            <!-- Username -->
+            <input autocomplete="off" type="text" id="Name" placeholder="Nombre de usuario">
+            <!-- Email -->
+            <input autocomplete="off" type="email" id="email" placeholder="Correo electronico">
+            <!-- Foto de perfil -->
+            <input type="file" id="photo" placeholder="Foto de perfil" accept="image/*">
+            <!-- Password -->
+            <input autocomplete="off" type="password" id="password" placeholder="Contraseña">
+            <button type="submit" id="submit">Sign up</button>
+        </form>
+        <hr>
+        <sub>O iniciar sesion con: </sub><br>
+        <img id="buttonFacebook" class="socialButtons" src="./assets/facebook.svg" alt="" width="40px">
+        <img id="buttonGoogle" class="socialButtons" src="./assets/google.svg" alt="" width="40px">
+    </div>
+    <div id="spinner"></div>
+    <script type="module" src="./scripts/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;700&family=Ubuntu&display=swap');
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#title {
+    color: orangered;
+    font-size: 1.8em;
+    font-family: 'Rowdies', cursive;
+    text-decoration: none;
+}
+
+#login {
+    cursor: pointer;
+    padding: 0;
+    margin: 10px 0;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    flex-direction: row;
+    padding: 10px;
+    background-color: #292929;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    align-items: center;
+}
+
+.nav__list>a,
+.nav__list>button {
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: 0;
+    font-size: 1.2em;
+}
