@@ -1,149 +1,266 @@
-    @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;700&family=Ubuntu&display=swap');
-    * {
-        font-family: 'Ubuntu', sans-serif;
-    }
-    
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: #222;
-        color: wh;
-    }
-    
-    #title {
-        color: orangered;
-        font-size: 1.8em;
-        font-family: 'Rowdies', cursive;
-        text-decoration: none;
-    }
-    
-    nav {
+@import url('basic.css');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--medium-spring-green);
+    transition: 0.5s;
+}
+
+body.active {
+    background-color: var(--dodger-blue);
+}
+
+.container {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 20px;
+}
+
+input.error {
+    border-color: red;
+    color: tomato;
+}
+
+.blackBg {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    box-shadow: 0 5px 45px rgba(247, 236, 236, 0.3);
+    background-color: var(--dodger-blue);
+}
+
+.blackBg.active {
+    background-color: var(--medium-spring-green);
+}
+
+.blackBg .box {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.prev {
+    background: var(--eerie-black);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
+}
+
+.prev ion-icon {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.blackBg h2 {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'space_mono';
+}
+
+.blackBg button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: var(--eerie-black);
+    color: #fff;
+    font-weight: 500;
+    border: none;
+}
+
+.formBx {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 50%;
+    height: 120%;
+    background: var(--rich-black-fogra-29);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.25);
+    transition: 0.5s ease-in-out;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.formBx .form {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 50px;
+    transition: 0.5s;
+}
+
+.formBx form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formBx .signinForm {
+    transition-delay: 0.25s;
+}
+
+.formBx .signupForm {
+    left: 100%;
+}
+
+
+.formBx.active .signupForm {
+    left: 0%;
+}
+
+.formBx.active .signinForm {
+    left: -100%;
+}
+
+.formBx.active {
+    left: 50%;
+
+}
+
+.formBx h3 {
+    font-size: 1.9rem;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.formBx input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #fff;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.formBx input[type="submit"] {
+    cursor: pointer;
+    background-color: var(--eerie-black);
+    color: white;
+    max-width: 100px;
+}
+
+.formBx a.forgot {
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+@media (max-width: 991px) {
+    .container {
+        max-width: 400px;
+        height: 550px;
         display: flex;
-        list-style: none;
-        flex-direction: row;
-        padding: 10px;
-        background-color: #292929;
-        justify-content: space-between;
-        position: sticky;
-        top: 0;
-        z-index: 5;
+        justify-content: center;
         align-items: center;
     }
-    
-    .nav__list>a,
-    .nav__list>button {
-        margin: 10px;
-        color: white;
-        text-decoration: none;
-        background: none;
-        border: 0;
-        font-size: 1.2em;
+
+    .container .blackBg {
+        top: 0;
+        height: 100%;
     }
-    
-    #spinner {
-        border: 4px solid rgba(0, 225, 255, 0.609);
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        border-left-color: transparent;
-        animation: spin 1s linear infinite;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        display: none;
+
+    .formBx {
+        width: 100%;
+        height: 400px;
+        top: 0px;
+        box-shadow: none;
     }
-    
-    @keyframes spin {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-    /* Estilo de los modales */
-    
-    .login {
-        margin: 20px auto;
-        background-color: white;
-        border-radius: 10px;
-        max-width: 30vw;
-        padding: 10px;
-        opacity: 1;
-        color: black;
-        text-align: center;
-        z-index: 50;
-    }
-    
-    [type="submit"] {
-        background-color: #00A6FF;
-        color: white;
-        font-size: 1em;
-        padding: 10px 15px;
-        border-radius: 7px;
-        border: 0px solid grey;
-        cursor: pointer;
-        min-width: 60%;
-        margin-bottom: 10px;
-    }
-    
-    form>input {
-        display: block;
-        margin: 20px 10px 20px;
-        font-size: 1em;
-        border: none;
-        border-bottom: 1px solid black;
-        width: 60%;
-        padding: 10px;
-        margin: 30px auto;
-        text-align: left !important;
-    }
-    
-    label {
+
+    .formBx.active {
+        height: 550px;
+        left: 0;
+        top: 150px;
         display: flex;
-        justify-content: flex-start;
-        font-size: 0.7em;
     }
-    
-    #titleLogin {
-        text-align: center;
+
+    .formBx.active .form {
+        overflow-y: scroll;
     }
-    /* Una animacion que haga que las letras crezcan en medio segundo */
-    
-    @keyframes grow {
-        0% {
-            transform: scale(1);
-        }
-        50% {
-            transform: scale(1.2);
-        }
-        100% {
-            transform: scale(1);
-        }
+
+    .blackBg .box {
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        bottom: 20px;
     }
-    
-    #error {
-        color: white;
-        font-weight: 600;
-        font-size: 1em;
-        margin: 10px;
-        padding: 10px;
-        border-radius: 5px;
-        background: tomato;
-        display: none;
+
+    .signin {
+        top: 20px;
     }
-    
-    input:focus-visible {
-        outline: none;
-        margin-top: 2px;
+
+    .signinBtn {
+        top: -20px;
     }
-    
-    .socialButtons:hover {
-        cursor: pointer;
-        animation-name: grow;
-        animation-duration: .7s;
+
+    .signupForm {
+        height: 600px;
     }
-    
-    img {
-        max-width: 100%;
-    }
+}
+
+.buttonsRegister img {
+    cursor: pointer;
+}
+
+#photo {
+    display: none;
+}
+
+[for="photo"].active {
+    display: none;
+}
+
+#photo-img {
+    max-height: 200px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+[for="photo"].active {
+    display: none;
+}
+
+[for="photo"] {
+    color: #fff;
+    display: flex;
+    font-size: 1.2em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--eerie-black);
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}

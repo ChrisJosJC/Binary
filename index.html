@@ -5,99 +5,165 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courbe - Where the copies don't exist!!!</title>
+    <title>Binary - Where the copies don't exist!!!</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./styles/style.css">
-    <script defer src="https://kit.fontawesome.com/218f190112.js" defer crossorigin="anonymous"></script>
+    <script src="./scripts/index.js" type="module"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <!-- Barra de navegación -->
-        <nav>
-            <a style="text-decoration: none;
-    color: whitesmoke;" href="/">
-                <h1 id="title">Courbe</h1>
-            </a>
-            <div class="nav__list">
-                <a href="home.html">Home</a>
-                <a href="courses.html">Mis cursos</a>
-                <a href="signup.html" id="login">Registrarse</a>
+    <!-- Sidebar de navegación -->
+    <nav class="navigation">
+        <ul>
+            <li class="list active">
+                <b></b><b></b>
+                <a href="/">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b><b></b>
+                <a href="/cursos.html">
+                    <span class="icon">
+                        <ion-icon name="book-outline"></ion-icon>
+                    </span>
+                    <span class="title">Cursos</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b><b></b>
+                <a href="/profile.html">
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <span class="title">Perfil</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b><b></b>
+                <a href="#footer">
+                    <span class="icon">
+                        <ion-icon name="call-outline"></ion-icon>
+                    </span>
+                    <span class="title">Contactanos</span>
+                </a>
+            </li>
+            <li class="list openAccount">
+                <b></b><b></b>
+                <a href="/signup.html">
+                    <span class="icon">
+                        <ion-icon name="log-in-outline"></ion-icon>
+                    </span>
+                    <span class="title">Registrarse</span>
+                </a>
+            </li>
+            <li class="list closeAccount">
+                <b></b><b></b>
+                <a href="/">
+                    <span class="icon">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                    </span>
+                    <span class="title">Cerrar sesion</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Header y navegación -->
+    <header>
+        <h1 class="header-title">Binary!</h1>
+        <a class="header-btn" href="/signup.html">Inicia sesion</a>
+    </header>
+    <div class="sections">
+        <div class="about">
+            <div class="about__text">
+                <h2>¿Que puedes aprender?</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, ullam fugit ipsum distinctio
+                    numquam doloremque, dolor voluptatem sequi obcaecati, laborum cupiditate nam blanditiis est quaerat
+                    consequuntur et laudantium illum necessitatibus!</p>
+                <a href="#">Ver más</a>
             </div>
+            <div class="bord-img">
+                <img loading="lazy" class="about__img" width="100%" src="./assets/tech.gif" alt="Tecnologias webs">
+            </div>
+        </div>
+        <!-- Tarjetas de los cursos -->
+        <div class="recents">
+            <h2>Nuestros ultimos cursos</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="box">
+                        <div class="content">
+                            <h2>01</h2>
+                            <h3>HTML5</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque alias unde amet
+                                perferendis nesciunt suscipit quod, delectus maxime fugit, quam eligendi accusantium
+                                voluptatum, dignissimos earum fugiat sed sint assumenda!</p>
+                            <a href="/cursos.html">See more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <div class="content">
+                            <h2>02</h2>
+                            <h3>CSS 3</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque alias unde amet
+                                perferendis nesciunt suscipit quod, delectus maxime fugit, quam eligendi accusantium
+                                voluptatum, dignissimos earum fugiat sed sint assumenda!</p>
+                            <a href="/cursos.html">See more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <div class="content">
+                            <h2>03</h2>
+                            <h3>Javascript</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque alias unde amet
+                                perferendis nesciunt suscipit quod, delectus maxime fugit, quam eligendi accusantium
+                                voluptatum, dignissimos earum fugiat sed sint assumenda!</p>
+                            <a href="/cursos.html">See more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </diiv>
 
-        </nav>
-        <!-- Carrusel de contenidos -->
-        <div class="row">
-            <div class="banner">
-                <div class="banner_text">
-                    <h2>Aprende lo que quieras hoy</h2>
-                    <p>No le temas a crear, pero no le temas a aprender, sigue aprendiendo a ser mejor cada dia, Por eso con Courbe podras aprender todo lo que quieras para innovar como quieras.</p>
-                </div>
-                <img id="banner" src="./assets/iustration.svg" alt="Imagen de un programador">
+            <div class="toggle">
+                <ion-icon name="menu-outline" class="open"></ion-icon>
+                <ion-icon name="close-outline" class="close"></ion-icon>
             </div>
+            <footer id="footer">
+                <div class="footer__content">
+                    <div class="footer__input">
+                        <h3>Contactanos</h3>
+                        <input type="text" placeholder="Ingresa tu nombre.">
+                        <input placeholder="Ingresa tu email." type="email" name="" id="">
+                        <textarea placeholder="Escribe el mensaje..." cols="30" rows="10"></textarea>
+                        <button>Enviar</button>
+                    </div>
+                </div>
+                <div class="social">
+                    <a href="#" style="--color: #3b5998">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="#" style="--color: #00acee">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                    <a href="#" style="--color: pink">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="#" style="--color: #25d366">
+                        <ion-icon name="logo-whatsapp"></ion-icon>
+                    </a>
+                </div>
+                <p class="footer__copy"><b>Binary</b> copyright 2022 &copy; Todos los derechos reservados.</p>
+            </footer>
         </div>
-        <div class="recientes">
-            <h2>Cursos más recientes</h2>
-            <div class="container__cards">
-                <div class="card">
-                    <div class="card-image"></div>
-                    <h3>Curso de Javascript</h3>
-                </div>
-                <div class="card">
-                    <div class="card-image two"></div>
-                    <h3>Curso de CSS 3</h3>
-
-                </div>
-                <div class="card">
-                    <div class="card-image three"></div>
-                    <h3>Curso de HTML5</h3>
-                </div>
-            </div>
-        </div>
-        <div class="recientes">
-            <h2>Nuestros maestros</h2>
-            <div class="container__cards">
-                <div class="card">
-                    <div class="card-image four"></div>
-                    <h3>Fazt</h3>
-                </div>
-                <div class="card">
-                    <div class="card-image five"></div>
-                    <h3>Alex CG Design</h3>
-
-                </div>
-                <div class="card">
-                    <div class="card-image six"></div>
-                    <h3>Jon Mircha</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <div class="footer-content">
-            <h3>Courbe</h3>
-            <p>No le temas a crear, pero no le temas a aprender, sigue aprendiendo a ser mejor cada dia, Por eso con Courbe podras aprender todo lo que quieras para innovar como quieras.</p>
-            <ul class="socials">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <p>Copyrigth &copy;2022 <a href="#">Courbe</a> </p>
-            <div class="footer-menu">
-                <ul class="f-menu">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Blog</a></li>
-                </ul>
-            </div>
-        </div>
-
-    </footer>
 </body>
 
 </html>

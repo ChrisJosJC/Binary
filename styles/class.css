@@ -1,0 +1,49 @@
+@import url('basic.css');
+
+.container {
+    padding: 10px;
+    padding-left: 80px;
+    background: radial-gradient(var(--rich-black-fogra-29), #222);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    height: 100%;
+    color: white;
+}
+
+#classvideo {
+    aspect-ratio: 16 / 9;
+    max-width: 700px;
+}
+
+
+aside {
+    background-color: rgba(255, 255, 255, 0.585);
+    backdrop-filter: blur(.5px);
+    border-radius: 10px;
+    padding: 10px;
+    position: sticky;
+    top: 30px;
+}
+
+.content hr {
+    margin-block: 10px;
+}
+
+#comentario {
+    width: 100%;
+    height: 150px;
+    outline: none;
+    resize: none;
+    border-radius: 3px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#sendMessage {
+    background: var(--dodger-blue);
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary - Your place for learning!!!</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/class.css">
+    <script defer src="/scripts/class.js" type="module"></script>
+    <script src="./scripts/index.js" type="module"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</head>
+
+<body>
+    <!-- Sidebar de navegación -->
+    <nav class="navigation">
+        <ul>
+            <li class="list active">
+                <b></b><b></b>
+                <a href="/">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b><b></b>
+                <a href="/cursos.html">
+                    <span class="icon">
+                        <ion-icon name="book-outline"></ion-icon>
+                    </span>
+                    <span class="title">Cursos</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b><b></b>
+                <a href="/profile.html">
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <span class="title">Perfil</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b><b></b>
+                <a href="#footer">
+                    <span class="icon">
+                        <ion-icon name="call-outline"></ion-icon>
+                    </span>
+                    <span class="title">Contactanos</span>
+                </a>
+            </li>
+            <li class="list openAccount">
+                <b></b><b></b>
+                <a href="/signup.html">
+                    <span class="icon">
+                        <ion-icon name="log-in-outline"></ion-icon>
+                    </span>
+                    <span class="title">Registrarse</span>
+                </a>
+            </li>
+            <li class="list closeAccount">
+                <b></b><b></b>
+                <a href="/">
+                    <span class="icon">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                    </span>
+                    <span class="title">Cerrar sesion</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="toggle">
+        <ion-icon name="menu-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon>
+    </div>
+    <!-- Plataforma de curso especifico -->
+    <div class="container">
+        <div class="content">
+            <iframe width="100%" id="classvideo" src="https://www.youtube.com/embed/rbuYtrNUxg4"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <h3 id="classname">Curso de HTML5</h3>
+            <p id="description">Este curso es una introducción a HTML, el lenguaje que permite la creación de paginas y
+                sitios web y es una de las
+                tecnologías fundamentales del desarollo web, tanto de aplicaciones Grandes como de sitios web pequeños.
+            </p>
+            <hr>
+            <h4>Envia tus comentarios</h4>
+            <textarea id="comentario" cols="30" rows="10"></textarea>
+            <button id="sendMessage">Envia tus comentarios</button>
+        </div>
+        <aside>
+            <img width="100px" src="./assets/[Binary].png" alt="">
+        </aside>
+    </div>
+</body>
